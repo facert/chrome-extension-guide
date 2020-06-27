@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Manifest 文件格式 | Chrome 扩展(插件) 开发教程</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版">
+    <link rel="preload" href="/assets/css/0.styles.34d67128.css" as="style"><link rel="preload" href="/assets/js/app.eec56759.js" as="script"><link rel="preload" href="/assets/js/2.dc06fe70.js" as="script"><link rel="preload" href="/assets/js/20.23c4442a.js" as="script"><link rel="prefetch" href="/assets/js/10.95e05f41.js"><link rel="prefetch" href="/assets/js/11.496b2fa0.js"><link rel="prefetch" href="/assets/js/12.140a17e0.js"><link rel="prefetch" href="/assets/js/13.e4dfb21b.js"><link rel="prefetch" href="/assets/js/14.631634f9.js"><link rel="prefetch" href="/assets/js/15.07662e20.js"><link rel="prefetch" href="/assets/js/16.215fd124.js"><link rel="prefetch" href="/assets/js/17.946ed0e5.js"><link rel="prefetch" href="/assets/js/18.ed94e45f.js"><link rel="prefetch" href="/assets/js/19.3cfd21c3.js"><link rel="prefetch" href="/assets/js/21.2dc9c439.js"><link rel="prefetch" href="/assets/js/22.f0d442df.js"><link rel="prefetch" href="/assets/js/23.6313af74.js"><link rel="prefetch" href="/assets/js/24.495cdc79.js"><link rel="prefetch" href="/assets/js/25.4132a71f.js"><link rel="prefetch" href="/assets/js/26.c273c405.js"><link rel="prefetch" href="/assets/js/3.be7c7eb1.js"><link rel="prefetch" href="/assets/js/4.ce56867c.js"><link rel="prefetch" href="/assets/js/5.22ab874c.js"><link rel="prefetch" href="/assets/js/6.dc67fcb0.js"><link rel="prefetch" href="/assets/js/7.ac5fdd81.js"><link rel="prefetch" href="/assets/js/8.888cd031.js"><link rel="prefetch" href="/assets/js/9.c69990a4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34d67128.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Chrome 扩展(插件) 开发教程</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>官方教程</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/what-is-extensions.html" class="sidebar-link">什么是扩展</a></li><li><a href="/guide/getstarted.html" class="sidebar-link">入门教程</a></li><li><a href="/guide/overview.html" class="sidebar-link">总览</a></li><li><a href="/guide/manifest.html" aria-current="page" class="active sidebar-link">Manifest 文件格式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/manifest.html#manifest-文件格式" class="sidebar-link">Manifest 文件格式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/manifest.html#字段摘要" class="sidebar-link">字段摘要</a></li></ul></li></ul></li><li><a href="/guide/background_content.html" class="sidebar-link">使用后台脚本管理事件</a></li><li><a href="/guide/user_interface.html" class="sidebar-link">设计交互界面</a></li><li><a href="/guide/content_scripts.html" class="sidebar-link">内容脚本 Content Scripts</a></li><li><a href="/guide/permission_warnings.html" class="sidebar-link">声明权限并警告用户</a></li><li><a href="/guide/options.html" class="sidebar-link">给用户选项</a></li><li><a href="/guide/devguide.html" class="sidebar-link">开发扩展</a></li><li><a href="/guide/performance.html" class="sidebar-link">达到最佳性能</a></li><li><a href="/guide/user_privacy.html" class="sidebar-link">保护用户隐私</a></li><li><a href="/guide/tut_debugging.html" class="sidebar-link">调试扩展</a></li><li><a href="/guide/tut_oauth.html" class="sidebar-link">OAuth2</a></li><li><a href="/guide/a11y.html" class="sidebar-link">辅助功能（a11y）</a></li><li><a href="/guide/contentSecurityPolicy.html" class="sidebar-link">内容安全政策（CSP）</a></li><li><a href="/guide/xhr.html" class="sidebar-link">跨域XMLHttpRequest</a></li><li><a href="/guide/messaging.html" class="sidebar-link">消息传递</a></li><li><a href="/guide/nativeMessaging.html" class="sidebar-link">本机消息</a></li><li><a href="/guide/match_patterns.html" class="sidebar-link">匹配模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="manifest-文件格式"><a href="#manifest-文件格式" class="header-anchor">#</a> Manifest 文件格式</h2> <p>每个扩展都有一个 JSON 格式的 manifest 文件，名为 manifest.json，来提供重要信息。</p> <h3 id="字段摘要"><a href="#字段摘要" class="header-anchor">#</a> 字段摘要</h3> <p>以下代码显示了扩展支持的 manifest 字段，以及指向讨论每个字段的页面的链接 (查看链接：<a href="https://developer.chrome.com/extensions/manifest" target="_blank" rel="noopener noreferrer">manifest<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>)。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  // Required
+  &quot;manifest_version&quot;: 2,
+  &quot;name&quot;: &quot;My Extension&quot;,
+  &quot;version&quot;: &quot;versionString&quot;,
+
+  // Recommended
+  &quot;default_locale&quot;: &quot;en&quot;,
+  &quot;description&quot;: &quot;A plain text description&quot;,
+  &quot;icons&quot;: {...},
+
+  // Pick one (or none)
+  &quot;browser_action&quot;: {...},
+  &quot;page_action&quot;: {...},
+
+  // Optional
+  &quot;action&quot;: ...,
+  &quot;author&quot;: ...,
+  &quot;automation&quot;: ...,
+  &quot;background&quot;: {
+    // Recommended
+    &quot;persistent&quot;: false,
+    // Optional
+    &quot;service_worker&quot;:
+  },
+  &quot;chrome_settings_overrides&quot;: {...},
+  &quot;chrome_ui_overrides&quot;: {
+    &quot;bookmarks_ui&quot;: {
+      &quot;remove_bookmark_shortcut&quot;: true,
+      &quot;remove_button&quot;: true
+    }
+  },
+  &quot;chrome_url_overrides&quot;: {...},
+  &quot;commands&quot;: {...},
+  &quot;content_capabilities&quot;: ...,
+  &quot;content_scripts&quot;: [{...}],
+  &quot;content_security_policy&quot;: &quot;policyString&quot;,
+  &quot;converted_from_user_script&quot;: ...,
+  &quot;current_locale&quot;: ...,
+  &quot;declarative_net_request&quot;: ...,
+  &quot;devtools_page&quot;: &quot;devtools.html&quot;,
+  &quot;event_rules&quot;: [{...}],
+  &quot;externally_connectable&quot;: {
+    &quot;matches&quot;: [&quot;*://*.example.com/*&quot;]
+  },
+  &quot;file_browser_handlers&quot;: [...],
+  &quot;file_system_provider_capabilities&quot;: {
+    &quot;configurable&quot;: true,
+    &quot;multiple_mounts&quot;: true,
+    &quot;source&quot;: &quot;network&quot;
+  },
+  &quot;homepage_url&quot;: &quot;http://path/to/homepage&quot;,
+  &quot;import&quot;: [{&quot;id&quot;: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;}],
+  &quot;incognito&quot;: &quot;spanning, split, or not_allowed&quot;,
+  &quot;input_components&quot;: ...,
+  &quot;key&quot;: &quot;publicKey&quot;,
+  &quot;minimum_chrome_version&quot;: &quot;versionString&quot;,
+  &quot;nacl_modules&quot;: [...],
+  &quot;oauth2&quot;: ...,
+  &quot;offline_enabled&quot;: true,
+  &quot;omnibox&quot;: {
+    &quot;keyword&quot;: &quot;aString&quot;
+  },
+  &quot;optional_permissions&quot;: [&quot;tabs&quot;],
+  &quot;options_page&quot;: &quot;options.html&quot;,
+  &quot;options_ui&quot;: {
+    &quot;chrome_style&quot;: true,
+    &quot;page&quot;: &quot;options.html&quot;
+  },
+  &quot;permissions&quot;: [&quot;tabs&quot;],
+  &quot;platforms&quot;: ...,
+  &quot;replacement_web_app&quot;: ...,
+  &quot;requirements&quot;: {...},
+  &quot;sandbox&quot;: [...],
+  &quot;short_name&quot;: &quot;Short Name&quot;,
+  &quot;signature&quot;: ...,
+  &quot;spellcheck&quot;: ...,
+  &quot;storage&quot;: {
+    &quot;managed_schema&quot;: &quot;schema.json&quot;
+  },
+  &quot;system_indicator&quot;: ...,
+  &quot;tts_engine&quot;: {...},
+  &quot;update_url&quot;: &quot;http://path/to/updateInfo.xml&quot;,
+  &quot;version_name&quot;: &quot;aString&quot;,
+  &quot;web_accessible_resources&quot;: [...]
+}
+</code></pre></div><hr> <p>关注 微信公众号「<strong>程序化思维</strong>」 获取最新 Chrome 插件开发教程。</p> <p><img src="/mp1.png" alt="mp_wechat"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/overview.html" class="prev">
+        总览
+      </a></span> <span class="next"><a href="/guide/background_content.html">
+        使用后台脚本管理事件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.eec56759.js" defer></script><script src="/assets/js/2.dc06fe70.js" defer></script><script src="/assets/js/20.23c4442a.js" defer></script>
+  </body>
+</html>

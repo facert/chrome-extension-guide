@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>达到最佳性能 | Chrome 扩展(插件) 开发教程</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版">
+    <link rel="preload" href="/assets/css/0.styles.34d67128.css" as="style"><link rel="preload" href="/assets/js/app.eec56759.js" as="script"><link rel="preload" href="/assets/js/2.dc06fe70.js" as="script"><link rel="preload" href="/assets/js/24.495cdc79.js" as="script"><link rel="prefetch" href="/assets/js/10.95e05f41.js"><link rel="prefetch" href="/assets/js/11.496b2fa0.js"><link rel="prefetch" href="/assets/js/12.140a17e0.js"><link rel="prefetch" href="/assets/js/13.e4dfb21b.js"><link rel="prefetch" href="/assets/js/14.631634f9.js"><link rel="prefetch" href="/assets/js/15.07662e20.js"><link rel="prefetch" href="/assets/js/16.215fd124.js"><link rel="prefetch" href="/assets/js/17.946ed0e5.js"><link rel="prefetch" href="/assets/js/18.ed94e45f.js"><link rel="prefetch" href="/assets/js/19.3cfd21c3.js"><link rel="prefetch" href="/assets/js/20.23c4442a.js"><link rel="prefetch" href="/assets/js/21.2dc9c439.js"><link rel="prefetch" href="/assets/js/22.f0d442df.js"><link rel="prefetch" href="/assets/js/23.6313af74.js"><link rel="prefetch" href="/assets/js/25.4132a71f.js"><link rel="prefetch" href="/assets/js/26.c273c405.js"><link rel="prefetch" href="/assets/js/3.be7c7eb1.js"><link rel="prefetch" href="/assets/js/4.ce56867c.js"><link rel="prefetch" href="/assets/js/5.22ab874c.js"><link rel="prefetch" href="/assets/js/6.dc67fcb0.js"><link rel="prefetch" href="/assets/js/7.ac5fdd81.js"><link rel="prefetch" href="/assets/js/8.888cd031.js"><link rel="prefetch" href="/assets/js/9.c69990a4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34d67128.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Chrome 扩展(插件) 开发教程</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>官方教程</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/what-is-extensions.html" class="sidebar-link">什么是扩展</a></li><li><a href="/guide/getstarted.html" class="sidebar-link">入门教程</a></li><li><a href="/guide/overview.html" class="sidebar-link">总览</a></li><li><a href="/guide/manifest.html" class="sidebar-link">Manifest 文件格式</a></li><li><a href="/guide/background_content.html" class="sidebar-link">使用后台脚本管理事件</a></li><li><a href="/guide/user_interface.html" class="sidebar-link">设计交互界面</a></li><li><a href="/guide/content_scripts.html" class="sidebar-link">内容脚本 Content Scripts</a></li><li><a href="/guide/permission_warnings.html" class="sidebar-link">声明权限并警告用户</a></li><li><a href="/guide/options.html" class="sidebar-link">给用户选项</a></li><li><a href="/guide/devguide.html" class="sidebar-link">开发扩展</a></li><li><a href="/guide/performance.html" aria-current="page" class="active sidebar-link">达到最佳性能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/performance.html#达到最佳性能" class="sidebar-link">达到最佳性能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/performance.html#尽可能延迟" class="sidebar-link">尽可能延迟</a></li><li class="sidebar-sub-header"><a href="/guide/performance.html#包含内容脚本" class="sidebar-link">包含内容脚本</a></li><li class="sidebar-sub-header"><a href="/guide/performance.html#评估代码效率" class="sidebar-link">评估代码效率</a></li></ul></li></ul></li><li><a href="/guide/user_privacy.html" class="sidebar-link">保护用户隐私</a></li><li><a href="/guide/tut_debugging.html" class="sidebar-link">调试扩展</a></li><li><a href="/guide/tut_oauth.html" class="sidebar-link">OAuth2</a></li><li><a href="/guide/a11y.html" class="sidebar-link">辅助功能（a11y）</a></li><li><a href="/guide/contentSecurityPolicy.html" class="sidebar-link">内容安全政策（CSP）</a></li><li><a href="/guide/xhr.html" class="sidebar-link">跨域XMLHttpRequest</a></li><li><a href="/guide/messaging.html" class="sidebar-link">消息传递</a></li><li><a href="/guide/nativeMessaging.html" class="sidebar-link">本机消息</a></li><li><a href="/guide/match_patterns.html" class="sidebar-link">匹配模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="达到最佳性能"><a href="#达到最佳性能" class="header-anchor">#</a> 达到最佳性能</h2> <p>扩展是浏览器的补充，旨在提供补充和自定义功能。 延缓或损害浏览体验的扩展程序对用户来说是有问题的，并且违背了Chrome 扩展程序的目标。除了一般的良好编码习惯外，开发人员还应遵循这些做法，以确保其扩展以最佳性能运行。</p> <h3 id="尽可能延迟"><a href="#尽可能延迟" class="header-anchor">#</a> 尽可能延迟</h3> <p>直到需要它们再加载资源。 在启动功能中仅包括打开扩展所需的功能。在启动过程中，请勿加载仅在用户点击按钮时才需要的东西，或仅在用户登录后才起作用的功能。</p> <h4 id="管理重要事件"><a href="#管理重要事件" class="header-anchor">#</a> 管理重要事件</h4> <p>高效的后台脚本包含对其扩展很重要的已注册事件。 它们处于休眠状态，直到触发了侦听器，再采取相应的操作，然后返回休眠状态。保持不需要的脚本运行，对系统资源的浪费。</p> <p>如果可能，应在 manifest 中注册后台脚本，并将其持久性设置为 false。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;High Performance Extension&quot;,
+  &quot;description&quot; : &quot;Sleepy Background Script&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  ...
+  &quot;background&quot;: {
+   &quot;scripts&quot;: [&quot;background.js&quot;],
+   &quot;persistent&quot;: false
+  },
+  ...
+}
+</code></pre></div><p>使扩展程序使用 chrome.webRequest API 劫持或修改网络请求的唯一方法是始终使后台脚本保持活动状态。 webRequest API 与非持久性后台页面不兼容。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;High Performance Extension&quot;,
+  &quot;description&quot; : &quot;Persistent Background Script&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  ...
+  &quot;background&quot;: {
+    &quot;scripts&quot;: [&quot;background.js&quot;],
+    &quot;persistent&quot;: true
+  },
+  &quot;permissions&quot;: [
+    &quot;webRequest&quot;,
+    &quot;webRequestBlocking&quot;,
+    &quot;https://&lt;distracting social media site&gt;.com/*&quot;
+  ],
+ ...
+ }
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code>chrome<span class="token punctuation">.</span>webRequest<span class="token punctuation">.</span>onBeforeRequest<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span>
+    <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">details</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>redirectUrl<span class="token operator">:</span> <span class="token string">&quot;https://developer.chrome.com/&quot;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>urls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;https://social.media.distraction.com/*&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">&quot;blocking&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="包含内容脚本"><a href="#包含内容脚本" class="header-anchor">#</a> 包含内容脚本</h3> <p>内容脚本应充当扩展程序的秘密代理，在扩展程序核心执行更繁琐的逻辑的同时，巧妙地读取或修改网页。他们应该有明确的目标，避免在不相关的页面上进行侵入性活动。理想情况下，除了有目的的行为外，内容脚本不应在浏览体验中引起注意。</p> <h4 id="声明目标"><a href="#声明目标" class="header-anchor">#</a> 声明目标</h4> <p>如果扩展程序在不必要的位置或不适当的时间运行内容脚本，可能会导致浏览器运行缓慢，并可能导致功能错误。通过在 manifest 中提供<a href="https://developer.chrome.com/match_patterns" target="_blank" rel="noopener noreferrer">匹配模式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>并在 document_idle 而不是document_start 上运行脚本来避免这种情况。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;High Performance Extension&quot;,
+  &quot;description&quot; : &quot;Superfly Superlight Content Scripts&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  ...
+  &quot;content_scripts&quot;: [
+    {
+      &quot;js&quot;: [&quot;content_script.js&quot;],
+      &quot;matches&quot;: [&quot;https://developer.chrome.com/*&quot;],
+      &quot;run_at&quot;: &quot;document_idle&quot;
+    }
+  ]
+  ...
+}
+</code></pre></div><p>如果扩展程序仅需要使用用户的操作来访问网页，请以代码方式将其注入。 只有在用户调用时，代码注入才会运行。</p> <div class="language-js extra-class"><pre class="language-js"><code>chrome<span class="token punctuation">.</span>browserAction<span class="token punctuation">.</span>onClicked<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">tab</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    chrome<span class="token punctuation">.</span>tabs<span class="token punctuation">.</span><span class="token function">executeScript</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      code<span class="token operator">:</span> <span class="token string">'document.body.style.fontSize=&quot;100px&quot;'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="仅在需要时使用内容脚本"><a href="#仅在需要时使用内容脚本" class="header-anchor">#</a> 仅在需要时使用内容脚本</h4> <p>许多扩展可能根本不需要内容脚本即可完成所需的功能。使用 declarativeContent API 将为扩展设置规则，以识别何时满足相关条件。这比内容脚本更有效，并且使用的代码更少！</p> <p>如果扩展需要在用户访问带有 HTML5 &lt; video &gt;元素的网站时向用户显示页面操作，则可以指定声明性规则。</p> <div class="language-js extra-class"><pre class="language-js"><code>chrome<span class="token punctuation">.</span>runtime<span class="token punctuation">.</span>onInstalled<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>onPageChanged<span class="token punctuation">.</span><span class="token function">removeRules</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>onPageChanged<span class="token punctuation">.</span><span class="token function">addRules</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          conditions<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token keyword">new</span> <span class="token class-name">chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>PageStateMatcher</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              css<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;video&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          actions<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token keyword">new</span> <span class="token class-name">chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>ShowPageAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="评估代码效率"><a href="#评估代码效率" class="header-anchor">#</a> 评估代码效率</h3> <p>可以将相同的网站性能通用做法应用于扩展，例如异步编程的实现技术以及使代码最少且紧凑。</p> <p>使用 Lighthouse 之类的工具评估扩展程序的性能，并确定可以在可视扩展程序页面上改进的目标区域。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/devguide.html" class="prev">
+        开发扩展
+      </a></span> <span class="next"><a href="/guide/user_privacy.html">
+        保护用户隐私
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.eec56759.js" defer></script><script src="/assets/js/2.dc06fe70.js" defer></script><script src="/assets/js/24.495cdc79.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>保持安全 | Chrome 扩展(插件) 开发教程</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版">
+    <link rel="preload" href="/assets/css/0.styles.34d67128.css" as="style"><link rel="preload" href="/assets/js/app.eec56759.js" as="script"><link rel="preload" href="/assets/js/2.dc06fe70.js" as="script"><link rel="preload" href="/assets/js/25.4132a71f.js" as="script"><link rel="prefetch" href="/assets/js/10.95e05f41.js"><link rel="prefetch" href="/assets/js/11.496b2fa0.js"><link rel="prefetch" href="/assets/js/12.140a17e0.js"><link rel="prefetch" href="/assets/js/13.e4dfb21b.js"><link rel="prefetch" href="/assets/js/14.631634f9.js"><link rel="prefetch" href="/assets/js/15.07662e20.js"><link rel="prefetch" href="/assets/js/16.215fd124.js"><link rel="prefetch" href="/assets/js/17.946ed0e5.js"><link rel="prefetch" href="/assets/js/18.ed94e45f.js"><link rel="prefetch" href="/assets/js/19.3cfd21c3.js"><link rel="prefetch" href="/assets/js/20.23c4442a.js"><link rel="prefetch" href="/assets/js/21.2dc9c439.js"><link rel="prefetch" href="/assets/js/22.f0d442df.js"><link rel="prefetch" href="/assets/js/23.6313af74.js"><link rel="prefetch" href="/assets/js/24.495cdc79.js"><link rel="prefetch" href="/assets/js/26.c273c405.js"><link rel="prefetch" href="/assets/js/3.be7c7eb1.js"><link rel="prefetch" href="/assets/js/4.ce56867c.js"><link rel="prefetch" href="/assets/js/5.22ab874c.js"><link rel="prefetch" href="/assets/js/6.dc67fcb0.js"><link rel="prefetch" href="/assets/js/7.ac5fdd81.js"><link rel="prefetch" href="/assets/js/8.888cd031.js"><link rel="prefetch" href="/assets/js/9.c69990a4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34d67128.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Chrome 扩展(插件) 开发教程</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>官方教程</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/what-is-extensions.html" class="sidebar-link">什么是扩展</a></li><li><a href="/guide/getstarted.html" class="sidebar-link">入门教程</a></li><li><a href="/guide/overview.html" class="sidebar-link">总览</a></li><li><a href="/guide/manifest.html" class="sidebar-link">Manifest 文件格式</a></li><li><a href="/guide/background_content.html" class="sidebar-link">使用后台脚本管理事件</a></li><li><a href="/guide/user_interface.html" class="sidebar-link">设计交互界面</a></li><li><a href="/guide/content_scripts.html" class="sidebar-link">内容脚本 Content Scripts</a></li><li><a href="/guide/permission_warnings.html" class="sidebar-link">声明权限并警告用户</a></li><li><a href="/guide/options.html" class="sidebar-link">给用户选项</a></li><li><a href="/guide/devguide.html" class="sidebar-link">开发扩展</a></li><li><a href="/guide/performance.html" class="sidebar-link">达到最佳性能</a></li><li><a href="/guide/user_privacy.html" class="sidebar-link">保护用户隐私</a></li><li><a href="/guide/tut_debugging.html" class="sidebar-link">调试扩展</a></li><li><a href="/guide/tut_oauth.html" class="sidebar-link">OAuth2</a></li><li><a href="/guide/a11y.html" class="sidebar-link">辅助功能（a11y）</a></li><li><a href="/guide/contentSecurityPolicy.html" class="sidebar-link">内容安全政策（CSP）</a></li><li><a href="/guide/xhr.html" class="sidebar-link">跨域XMLHttpRequest</a></li><li><a href="/guide/messaging.html" class="sidebar-link">消息传递</a></li><li><a href="/guide/nativeMessaging.html" class="sidebar-link">本机消息</a></li><li><a href="/guide/match_patterns.html" class="sidebar-link">匹配模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="保持安全"><a href="#保持安全" class="header-anchor">#</a> 保持安全</h2> <p>扩展程序可以访问浏览器中的特殊特权，从而使它们成为攻击者的目标。如果某个扩展遭到破坏，则该扩展的所有用户都容易受到恶意和有害入侵的攻击。通过采用这些做法，可以确保扩展的安全性及其用户的安全。</p> <h3 id="保护开发者帐户"><a href="#保护开发者帐户" class="header-anchor">#</a> 保护开发者帐户</h3> <p>扩展代码通过 Google 帐户上传和更新。如果开发人员的帐户遭到入侵，攻击者可能会将恶意代码直接推送给所有用户。通过专门创建开发人员帐户并启用<a href="https://support.google.com/accounts/answer/185839?hl=en" target="_blank" rel="noopener noreferrer">二次身份验证<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>（最好使用安全密钥）来保护这些帐户。</p> <h4 id="保持组的可选性"><a href="#保持组的可选性" class="header-anchor">#</a> 保持组的可选性</h4> <p>如果使用组发布，则将组限制在受信任的开发人员中。不接受来自陌生人的会员要求。</p> <h3 id="永远不要使用-http"><a href="#永远不要使用-http" class="header-anchor">#</a> 永远不要使用 HTTP</h3> <p>请求或发送数据时，避免使用 HTTP 连接。假定任何 HTTP 连接都具有窃听者或包含修改。始终应首选 HTTPS，因为它具有内置的安全性，可以绕过大多数<a href="https://www.owasp.org/index.php/Man-in-the-middle_attack" target="_blank" rel="noopener noreferrer">中间人攻击<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h3 id="要求最低权限"><a href="#要求最低权限" class="header-anchor">#</a> 要求最低权限</h3> <p>Chrome 浏览器将扩展程序的访问权限限制为 manifest 中已明确请求的权限。扩展应仅通过注册其依赖的 API 和网站来最大程度地减少其权限。 随意的代码应保持最小化。</p> <p>限制扩展权限会限制潜在攻击者可以利用的内容。</p> <h4 id="跨域xmlhttprequest"><a href="#跨域xmlhttprequest" class="header-anchor">#</a> 跨域XMLHttpRequest</h4> <p>扩展只能使用 XMLHttpRequest 从自身和权限中指定的域中获取资源。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Very Secure Extension&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Example of a Secure Extension&quot;,
+    &quot;permissions&quot;: [
+      &quot;https://developer.chrome.com/*&quot;,
+      &quot;https://*.google.com/&quot;
+    ],
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>此扩展程序通过在权限中列出 “https://developer.chrome.com/* ” 和 “https：//*google.com/” 来请求访问developer.chrome.com 和Google 子域上的任何内容。如果扩展名遭到入侵，它仍然仅具有与符合匹配模式的网站进行交互的权限。攻击者将无法访问“https://user_bank_info.com” 或与“https://malicious_website.com” 进行交互。</p> <h3 id="限制-manifest-字段"><a href="#限制-manifest-字段" class="header-anchor">#</a> 限制 manifest 字段</h3> <p>在 manifest 中包含不必要的注册会产生漏洞，并使扩展更可见。将 manifest 字段限制为扩展所依赖的字段并进行特定的字段注册。</p> <h4 id="externally-connectable"><a href="#externally-connectable" class="header-anchor">#</a> Externally Connectable</h4> <p>使用 <a href="https://developer.chrome.com/manifest/externally_connectable" target="_blank" rel="noopener noreferrer">externally_connectable<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 字段来声明该扩展程序将与之交换信息的外部扩展程序和网页。 限制扩展与外部连接的来源。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Super Safe Extension&quot;,
+    &quot;externally_connectable&quot;: {
+      &quot;ids&quot;: [
+        &quot;iamafriendlyextensionhereisdatas&quot;
+      ],
+      &quot;matches&quot;: [
+        &quot;https://developer.chrome.com/*&quot;,
+        &quot;https://*google.com/&quot;
+      ],
+      &quot;accepts_tls_channel_id&quot;: false
+    },
+    ...
+  }
+</code></pre></div><h4 id="web-accessible-resources"><a href="#web-accessible-resources" class="header-anchor">#</a> Web Accessible Resources</h4> <p>通过在 web_accessible_resources 下使资源可通过 Web 访问，将使网站和攻击者可以检测到扩展。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  ...
+  &quot;web_accessible_resources&quot;: [
+    &quot;images/*.png&quot;,
+    &quot;style/secure_extension.css&quot;,
+    &quot;script/secure_extension.js&quot;
+  ],
+  ...
+}
+</code></pre></div><p>可用的 Web 访问资源越多，潜在的攻击者就可以利用更多的途径。将这些文件减至最少。</p> <h3 id="包括明确的内容安全政策"><a href="#包括明确的内容安全政策" class="header-anchor">#</a> 包括明确的内容安全政策</h3> <p>在 manifest 中包含扩展的内容安全性策略，以防止跨站脚本攻击。如果扩展仅从自身加载资源，请注册以下内容：</p> <div class="language- extra-class"><pre class="language-text"><code>  {
+    &quot;name&quot;: &quot;Very Secure Extension&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Example of a Secure Extension&quot;,
+    &quot;content_security_policy&quot;: &quot;default-src 'self'&quot;
+    &quot;manifest_version&quot;: 2
+  }
+
+</code></pre></div><p>如果扩展需要包括来自特定主机的脚本，则可以包括以下脚本：</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Very Secure Extension&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Example of a Secure Extension&quot;,
+    &quot;content_security_policy&quot;: &quot;default-src 'self' https://extension.resource.com&quot;
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><h3 id="避免使用可执行-api"><a href="#避免使用可执行-api" class="header-anchor">#</a> 避免使用可执行 API</h3> <p>可执行代码的 API 应该替换为更安全的方法。</p> <h4 id="document-write-和-innerhtml"><a href="#document-write-和-innerhtml" class="header-anchor">#</a> document.write() 和 innerHTML</h4> <p>虽然使用 document.write() 和 innerHTML 动态创建 HTML 元素可能更简单，但它会留下扩展以及该扩展名所依赖的网页，从而使攻击者可以插入恶意脚本。应该手动创建 DOM 节点，并使用innerText 插入动态内容。</p> <div class="language- extra-class"><pre class="language-text"><code>function constructDOM() {
+    let newTitle = document.createElement('h1');
+    newTitle.innerText = host;
+    document.appendChild(newTitle);
+  }
+</code></pre></div><h4 id="eval"><a href="#eval" class="header-anchor">#</a> eval()</h4> <p>尽可能避免使用 eval() 来防止攻击，因为eval() 会执行传递给它的任何代码，这可能是恶意的。</p> <div class="language- extra-class"><pre class="language-text"><code> var xhr = new XMLHttpRequest();
+  xhr.open(&quot;GET&quot;, &quot;https://api.example.com/data.json&quot;, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      // WARNING! Might be evaluating an evil script!
+      var resp = eval(&quot;(&quot; + xhr.responseText + &quot;)&quot;);
+      ...
+    }
+  }
+  xhr.send();
+</code></pre></div><p>取而代之的是，更安全，更快的方法，例如JSON.parse()</p> <div class="language- extra-class"><pre class="language-text"><code> var xhr = new XMLHttpRequest();
+  xhr.open(&quot;GET&quot;, &quot;https://api.example.com/data.json&quot;, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      // JSON.parse does not evaluate the attacker's scripts.
+      var resp = JSON.parse(xhr.responseText);
+    }
+  }
+  xhr.send();
+</code></pre></div><h3 id="谨慎使用内容脚本"><a href="#谨慎使用内容脚本" class="header-anchor">#</a> 谨慎使用内容脚本</h3> <p>尽管内容脚本生活在一个孤立的世界中，但它们无法免受攻击：</p> <ul><li>内容脚本是扩展的唯一可以直接与网页交互的部分。因此，恶意网页可能会操纵内容脚本所依赖的 DOM 部分，或者利用 Web 标准行为，例如<a href="https://html.spec.whatwg.org/#dom-window-nameditem" target="_blank" rel="noopener noreferrer">命名项<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</li> <li>为了与网页的 DOM 交互，内容脚本需要在与网页相同的渲染器进程中执行。这使得内容脚本容易受到通过旁通道攻击（例如 <a href="https://spectreattack.com/" target="_blank" rel="noopener noreferrer">Spectre<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>）数据泄漏的威胁，并且如果恶意网页感染了渲染器进程，则很容易被攻击者接管。</li></ul> <p>敏感的任务应在专用进程中执行，例如扩展程序的后台脚本。避免意外地将扩展特权暴露给内容脚本：</p> <ul><li>假设来自内容脚本的消息可能是攻击者制作的（例如，验证并清除所有输入并保护您的脚本免受跨站脚本攻击）。</li> <li>假设发送到内容脚本的任何数据都可能泄漏到网页上。请勿将敏感数据（例如扩展中的密钥，其他 Web 来源的数据，浏览历史记录）发送到内容脚本。</li> <li>限制可以由内容脚本触发的特权操作的范围。不允许内容脚本触发<a href="https://developer.chrome.com/xhr#xhr-vs-content-scripts" target="_blank" rel="noopener noreferrer">对任意 URL 的请求<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>或将任意参数传递给扩展 API（例如，不允许将任意 URL传递给 fetch 或 chrome.tabs.create API）。</li></ul> <h3 id="注册并清理输入"><a href="#注册并清理输入" class="header-anchor">#</a> 注册并清理输入</h3> <p>通过将监听器限制为扩展所期望的内容，验证传入数据的发送方并清除所有输入，来保护扩展免受恶意脚本的攻击。</p> <p>如果扩展期望从外部网站或扩展进行通信，则仅应注册 <a href="https://developer.chrome.com/runtime#event-onMessageExternal" target="_blank" rel="noopener noreferrer">runtime.onRequestExternal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。 始终验证 sender 是否匹配受信任的来源。</p> <div class="language- extra-class"><pre class="language-text"><code>  // The ID of an external extension
+  const kFriendlyExtensionId = &quot;iamafriendlyextensionhereisdatas&quot;;
+
+  chrome.runtime.onMessageExternal.addListener(
+    function(request, sender, sendResponse) {
+      if (sender.id === kFriendlyExtensionId)
+        doSomething();
+  });
+</code></pre></div><p>即使是扩展本身通过 runtime.onMessage 事件发出的消息，也应进行仔细检查，以确保MessageSender 并非来自受感染的内容脚本。</p> <div class="language- extra-class"><pre class="language-text"><code>chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.allowedAction)
+      console.log(&quot;This is an allowed action.&quot;);
+  });
+</code></pre></div><p>通过清除用户输入和输出数据（甚至来自扩展本身和批准的源），防止扩展执行攻击者的脚本。 避免使用可执行的 API。</p> <div class="language- extra-class"><pre class="language-text"><code>function sanitizeInput(input) {
+      return input.replace(/&amp;/g, '&amp;amp;').replace(/&lt;/g, '&amp;lt;').replace(/&quot;/g, '&amp;quot;');
+  }
+</code></pre></div><hr> <p>关注 微信公众号「<strong>程序化思维</strong>」 获取最新 Chrome 插件开发教程。</p> <p><img src="/mp1.png" alt="mp_wechat"></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.eec56759.js" defer></script><script src="/assets/js/2.dc06fe70.js" defer></script><script src="/assets/js/25.4132a71f.js" defer></script>
+  </body>
+</html>

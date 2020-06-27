@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>入门教程 | Chrome 扩展(插件) 开发教程</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版">
+    <link rel="preload" href="/assets/css/0.styles.34d67128.css" as="style"><link rel="preload" href="/assets/js/app.eec56759.js" as="script"><link rel="preload" href="/assets/js/2.dc06fe70.js" as="script"><link rel="preload" href="/assets/js/7.ac5fdd81.js" as="script"><link rel="prefetch" href="/assets/js/10.95e05f41.js"><link rel="prefetch" href="/assets/js/11.496b2fa0.js"><link rel="prefetch" href="/assets/js/12.140a17e0.js"><link rel="prefetch" href="/assets/js/13.e4dfb21b.js"><link rel="prefetch" href="/assets/js/14.631634f9.js"><link rel="prefetch" href="/assets/js/15.07662e20.js"><link rel="prefetch" href="/assets/js/16.215fd124.js"><link rel="prefetch" href="/assets/js/17.946ed0e5.js"><link rel="prefetch" href="/assets/js/18.ed94e45f.js"><link rel="prefetch" href="/assets/js/19.3cfd21c3.js"><link rel="prefetch" href="/assets/js/20.23c4442a.js"><link rel="prefetch" href="/assets/js/21.2dc9c439.js"><link rel="prefetch" href="/assets/js/22.f0d442df.js"><link rel="prefetch" href="/assets/js/23.6313af74.js"><link rel="prefetch" href="/assets/js/24.495cdc79.js"><link rel="prefetch" href="/assets/js/25.4132a71f.js"><link rel="prefetch" href="/assets/js/26.c273c405.js"><link rel="prefetch" href="/assets/js/3.be7c7eb1.js"><link rel="prefetch" href="/assets/js/4.ce56867c.js"><link rel="prefetch" href="/assets/js/5.22ab874c.js"><link rel="prefetch" href="/assets/js/6.dc67fcb0.js"><link rel="prefetch" href="/assets/js/8.888cd031.js"><link rel="prefetch" href="/assets/js/9.c69990a4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34d67128.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Chrome 扩展(插件) 开发教程</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/what-is-extensions.html" class="nav-link">
+  官方中文版教程
+</a></div><div class="nav-item"><a href="https://github.com/facert" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>官方教程</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/what-is-extensions.html" class="sidebar-link">什么是扩展</a></li><li><a href="/guide/getstarted.html" aria-current="page" class="active sidebar-link">入门教程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/getstarted.html#入门教程" class="sidebar-link">入门教程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/getstarted.html#创建-manifest" class="sidebar-link">创建 Manifest</a></li><li class="sidebar-sub-header"><a href="/guide/getstarted.html#增加指令" class="sidebar-link">增加指令</a></li><li class="sidebar-sub-header"><a href="/guide/getstarted.html#引入交互界面" class="sidebar-link">引入交互界面</a></li><li class="sidebar-sub-header"><a href="/guide/getstarted.html#逻辑层" class="sidebar-link">逻辑层</a></li><li class="sidebar-sub-header"><a href="/guide/getstarted.html#给用户选项" class="sidebar-link">给用户选项</a></li><li class="sidebar-sub-header"><a href="/guide/getstarted.html#下一步" class="sidebar-link">下一步</a></li></ul></li></ul></li><li><a href="/guide/overview.html" class="sidebar-link">总览</a></li><li><a href="/guide/manifest.html" class="sidebar-link">Manifest 文件格式</a></li><li><a href="/guide/background_content.html" class="sidebar-link">使用后台脚本管理事件</a></li><li><a href="/guide/user_interface.html" class="sidebar-link">设计交互界面</a></li><li><a href="/guide/content_scripts.html" class="sidebar-link">内容脚本 Content Scripts</a></li><li><a href="/guide/permission_warnings.html" class="sidebar-link">声明权限并警告用户</a></li><li><a href="/guide/options.html" class="sidebar-link">给用户选项</a></li><li><a href="/guide/devguide.html" class="sidebar-link">开发扩展</a></li><li><a href="/guide/performance.html" class="sidebar-link">达到最佳性能</a></li><li><a href="/guide/user_privacy.html" class="sidebar-link">保护用户隐私</a></li><li><a href="/guide/tut_debugging.html" class="sidebar-link">调试扩展</a></li><li><a href="/guide/tut_oauth.html" class="sidebar-link">OAuth2</a></li><li><a href="/guide/a11y.html" class="sidebar-link">辅助功能（a11y）</a></li><li><a href="/guide/contentSecurityPolicy.html" class="sidebar-link">内容安全政策（CSP）</a></li><li><a href="/guide/xhr.html" class="sidebar-link">跨域XMLHttpRequest</a></li><li><a href="/guide/messaging.html" class="sidebar-link">消息传递</a></li><li><a href="/guide/nativeMessaging.html" class="sidebar-link">本机消息</a></li><li><a href="/guide/match_patterns.html" class="sidebar-link">匹配模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="入门教程"><a href="#入门教程" class="header-anchor">#</a> 入门教程</h2> <p>扩展由不同但相互联系的组件组成。组件可以包括 <a href="/guide/background_content.html">后台脚本</a>，<a href="/guide/content_scripts.html">内容脚本</a>，<a href="/guide/options.html">选项页</a>，<a href="/guide/user_interface.html">交互页面</a>和各种逻辑文件。扩展组件是使用 Web 开发技术创建的：HTML，CSS 和 JavaScript。扩展的组件各有其功能，并且是可选的。</p> <p>本教程将构建一个扩展，允许用户更改 developer.chrome.com 上任何页面的背景颜色。 我们将使用许多核心组件来介绍它们之间的关系。</p> <p>首先，创建一个新目录来保存扩展名的文件。</p> <p>完整的扩展程序可以在<a href="./assets/get_started_complete.zip">此处</a>下载。</p> <h3 id="创建-manifest"><a href="#创建-manifest" class="header-anchor">#</a> 创建 Manifest</h3> <p>扩展始于 <a href="/guide/manifest.html">manifest</a>，我们先创建一个 manifest.json 文件，包含如下代码。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Build an Extension!&quot;,
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>包含 manifest 文件的目录可在开发人员模式下以其当前状态添加为扩展。</p> <ol><li><p>在浏览器地址栏中输入 chrome://extensions, 打开<strong>扩展管理</strong>页面。</p> <ul><li>也可以通过单击 Chrome 菜单，将鼠标悬停在<strong>更多工具</strong>上，然后选择<strong>扩展程序</strong>来打开<strong>扩展程序管理</strong>页面。</li></ul></li> <li><p>通过单击<strong>开发人员模式</strong>旁边的切换开关启用开发人员模式。</p></li> <li><p>单击<strong>加载已解压的扩展程序</strong>按钮，然后选择扩展目录。</p></li></ol> <p><img src="/assets/img/load_extension.bb448709.png" alt="load_extension.png"></p> <p>该扩展程序已成功安装。 由于 manifest 中未包含任何图标，因此将为扩展名创建通用工具栏图标。</p> <h3 id="增加指令"><a href="#增加指令" class="header-anchor">#</a> 增加指令</h3> <p>尽管已安装完扩展，但还没有程序逻辑。通过创建名为 background.js 的文件并将其放置在扩展目录中，来引入<a href="/guide/background_content.html">后台脚本</a>。</p> <p>后台脚本和许多其他重要组件一样必须在 manifest 中注册。 在 manifest 中注册后台脚本会告诉扩展要引用哪个文件，以及该文件的行为。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Build an Extension!&quot;,
+    &quot;background&quot;: {
+      &quot;scripts&quot;: [&quot;background.js&quot;],
+      &quot;persistent&quot;: false
+    },
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>现在，该扩展程序知道它包含一个非持久性后台脚本，并将扫描注册文件中需要监听的重要事件。</p> <p>该插件监听被安装后，来自持久化变量的消息。首先在后台脚本中包含一个 <a href="https://developer.chrome.com/runtime#event-onInstalled" target="_blank" rel="noopener noreferrer">runtime.onInstalled<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的监听事件。在 onInstalled 监听器内部，扩展使用 <a href="https://developer.chrome.com/storage" target="_blank" rel="noopener noreferrer">storage<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> API 设置一个值。这将允许多个扩展组件访问该值并进行更新。</p> <div class="language-js extra-class"><pre class="language-js"><code>chrome<span class="token punctuation">.</span>runtime<span class="token punctuation">.</span>onInstalled<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    chrome<span class="token punctuation">.</span>storage<span class="token punctuation">.</span>sync<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">{</span>color<span class="token operator">:</span> <span class="token string">'#3aa757'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;The color is green.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>大部分 API，包括 <a href="https://developer.chrome.com/storage" target="_blank" rel="noopener noreferrer">storage<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> api，必须被注册在 manifest 的 <em>permissions</em> 字段中给插件使用。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Build an Extension!&quot;,
+    &quot;permissions&quot;: [&quot;storage&quot;],
+    &quot;background&quot;: {
+      &quot;scripts&quot;: [&quot;background.js&quot;],
+      &quot;persistent&quot;: false
+    },
+    &quot;manifest_version&quot;: 2
+  }
+
+</code></pre></div><p>进到扩展管理页面，然后单击<strong>重新加载</strong>。 能看到一个带有蓝色链接（背景页）的新字段 <strong>查看视图</strong>。</p> <p><img src="/assets/img/view_background.466bb437.png" alt="view_background.png"></p> <p>点击链接，查看后台脚本的 console.log。 显示 &quot;The color is green.&quot;</p> <h3 id="引入交互界面"><a href="#引入交互界面" class="header-anchor">#</a> 引入交互界面</h3> <p>扩展可以有多种形式的<a href="/guide/user_interface.html">用户界面</a>，这次我们使用 <em>popup</em> 弹窗。 创建一个名为 popup.html 的文件并将其添加到该目录。该扩展程序通过点击按钮来更改背景颜色。</p> <div class="language-html extra-class"><pre class="language-html"><code>  <span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">button</span> <span class="token punctuation">{</span>
+          <span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+          <span class="token property">width</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+          <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>changeColor<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>与后台脚本一样，需要在 page_action 下的 manifest 中将此文件指定为 popup 弹出窗口。</p> <div class="language- extra-class"><pre class="language-text"><code>  {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Build an Extension!&quot;,
+    &quot;permissions&quot;: [&quot;storage&quot;],
+    &quot;background&quot;: {
+      &quot;scripts&quot;: [&quot;background.js&quot;],
+      &quot;persistent&quot;: false
+    },
+    &quot;page_action&quot;: {
+      &quot;default_popup&quot;: &quot;popup.html&quot;
+    },
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>工具栏图标的名称也包含在 page_action 的 default_icons 字段下。 在<a href="https://developer.chrome.com/extensions/examples/tutorials/get_started/images.zip" target="_blank" rel="noopener noreferrer">此处<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>下载 images 文件夹，将其解压缩，放置在扩展程序的目录中。更新 manifest，以便让扩展程序知道如何使用图像。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Build an Extension!&quot;,
+    &quot;permissions&quot;: [&quot;storage&quot;],
+    &quot;background&quot;: {
+      &quot;scripts&quot;: [&quot;background.js&quot;],
+      &quot;persistent&quot;: false
+    },
+    &quot;page_action&quot;: {
+      &quot;default_popup&quot;: &quot;popup.html&quot;,
+      &quot;default_icon&quot;: {
+        &quot;16&quot;: &quot;images/get_started16.png&quot;,
+        &quot;32&quot;: &quot;images/get_started32.png&quot;,
+        &quot;48&quot;: &quot;images/get_started48.png&quot;,
+        &quot;128&quot;: &quot;images/get_started128.png&quot;
+      }
+    },
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>扩展程序也会在扩展程序管理页面上显示图像，权限警告和网站图标。这些图像在 manifest 的 icons 下指定。</p> <div class="language- extra-class"><pre class="language-text"><code>  {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;Build an Extension!&quot;,
+    &quot;permissions&quot;: [&quot;storage&quot;],
+    &quot;background&quot;: {
+      &quot;scripts&quot;: [&quot;background.js&quot;],
+      &quot;persistent&quot;: false
+    },
+    &quot;page_action&quot;: {
+      &quot;default_popup&quot;: &quot;popup.html&quot;,
+      &quot;default_icon&quot;: {
+        &quot;16&quot;: &quot;images/get_started16.png&quot;,
+        &quot;32&quot;: &quot;images/get_started32.png&quot;,
+        &quot;48&quot;: &quot;images/get_started48.png&quot;,
+        &quot;128&quot;: &quot;images/get_started128.png&quot;
+      }
+    },
+    &quot;icons&quot;: {
+      &quot;16&quot;: &quot;images/get_started16.png&quot;,
+      &quot;32&quot;: &quot;images/get_started32.png&quot;,
+      &quot;48&quot;: &quot;images/get_started48.png&quot;,
+      &quot;128&quot;: &quot;images/get_started128.png&quot;
+    },
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>如果在此阶段重新加载扩展，它将包含一个灰度图标，但不会有任何功能差异。因为 page_action 在 manifest 已声明，因此由扩展决定何时告诉浏览器用户可与 popup.html 进行交互。</p> <p>在 runtime.onInstalled 侦听器事件中，使用 <a href="https://developer.chrome.com/declarativeContent" target="_blank" rel="noopener noreferrer">declarativeContent<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> API 将声明的规则添加到后台脚本中。</p> <div class="language-js extra-class"><pre class="language-js"><code> chrome<span class="token punctuation">.</span>runtime<span class="token punctuation">.</span>onInstalled<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    chrome<span class="token punctuation">.</span>storage<span class="token punctuation">.</span>sync<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">{</span>color<span class="token operator">:</span> <span class="token string">'#3aa757'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'The color is green.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>onPageChanged<span class="token punctuation">.</span><span class="token function">removeRules</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>onPageChanged<span class="token punctuation">.</span><span class="token function">addRules</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+        conditions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>PageStateMatcher</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          pageUrl<span class="token operator">:</span> <span class="token punctuation">{</span>hostEquals<span class="token operator">:</span> <span class="token string">'developer.chrome.com'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            actions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">chrome<span class="token punctuation">.</span>declarativeContent<span class="token punctuation">.</span>ShowPageAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>此扩展需要 <a href="https://developer.chrome.com/declarativeContent" target="_blank" rel="noopener noreferrer">declarativeContent<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> api 的权限。</p> <div class="language- extra-class"><pre class="language-text"><code> {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+  ...
+    &quot;permissions&quot;: [&quot;declarativeContent&quot;, &quot;storage&quot;],
+  ...
+  }
+</code></pre></div><p>现在，当用户访问到包含 developer.chrome.com 的 URL 时，浏览器将在工具栏中显示一个全彩页面操作图标。当该图标为全彩时，用户可以单击它以查看popup.html。
+<img src="data:image/png;base64,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" alt="popup_grey.png"></p> <p>弹出界面的最后一步是为按钮添加颜色。 使用以下代码创建一个名为 popup.js的文件并将其添加到扩展目录。</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token keyword">let</span> changeColor <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'changeColor'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  chrome<span class="token punctuation">.</span>storage<span class="token punctuation">.</span>sync<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'color'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    changeColor<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> data<span class="token punctuation">.</span>color<span class="token punctuation">;</span>
+    changeColor<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'value'</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>此代码从 popup.html 获取按钮，并从存储中拿到颜色值。然后，它将此颜色用作按钮的背景。将 popup.js script 标签包含到 popup.html 中。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>changeColor<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>popup.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>重新加载扩展以查看绿色按钮。</p> <h3 id="逻辑层"><a href="#逻辑层" class="header-anchor">#</a> 逻辑层</h3> <p>现在，该扩展程序知道该弹出窗口应对 developer.chrome.com 上的用户可用，并显示一个彩色按钮，但需要逻辑来进行进一步的用户交互。更新 popup.js 以包含以下代码。</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">let</span> changeColor <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'changeColor'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">...</span>
+  changeColor<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> color <span class="token operator">=</span> element<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    chrome<span class="token punctuation">.</span>tabs<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token punctuation">{</span>active<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> currentWindow<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">tabs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      chrome<span class="token punctuation">.</span>tabs<span class="token punctuation">.</span><span class="token function">executeScript</span><span class="token punctuation">(</span>
+          tabs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>code<span class="token operator">:</span> <span class="token string">'document.body.style.backgroundColor = &quot;'</span> <span class="token operator">+</span> color <span class="token operator">+</span> <span class="token string">'&quot;;'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>更新的代码在按钮上添加了 onclick 事件，该事件执行以代码方式注入的内容脚本。将页面的背景色变成与按钮相同的颜色。使用代码注入可以允许用户调用内容脚本，而不用将不需要的代码自动插入到网页中。</p> <p>manifest 将需要 activeTab 权限，以允许扩展程序临时访问 tabs API。 这使扩展程序可以调用 tabs.executeScript。</p> <div class="language- extra-class"><pre class="language-text"><code>  {
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+  ...
+    &quot;permissions&quot;: [&quot;activeTab&quot;, &quot;declarativeContent&quot;, &quot;storage&quot;],
+  ...
+  }
+</code></pre></div><p>该扩展程序现在可以正常使用了！重新加载扩展程序，刷新此页面，打开弹出窗口，然后单击按钮将其变为绿色！ 但是，某些用户可能希望将背景更改为其他颜色。</p> <h3 id="给用户选项"><a href="#给用户选项" class="header-anchor">#</a> 给用户选项</h3> <p>该扩展程序当前仅允许用户将背景更改为绿色。包含一个选项页面使用户可以更好地控制扩展功能，从而进一步自定义其浏览体验。</p> <p>首先在目录中创建一个名为 options.html 的文件，并包含以下代码。</p> <div class="language-html extra-class"><pre class="language-html"><code> <span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">button</span> <span class="token punctuation">{</span>
+          <span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+          <span class="token property">width</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+          <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+          <span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>buttonDiv<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Choose a different background color!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>options.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>然后在 manifest 的 options_page 中注册。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;name&quot;: &quot;Getting Started Example&quot;,
+    ...
+    &quot;options_page&quot;: &quot;options.html&quot;,
+    ...
+    &quot;manifest_version&quot;: 2
+  }
+</code></pre></div><p>重新加载扩展程序，点击<strong>详情</strong></p> <p><img src="/assets/img/click_details.697ff3d9.png" alt="click_details.png"></p> <p>向下滚动详细信息页面，然后选择<strong>扩展选项</strong>以查看选项页面，尽管当前该页面将显示为空白。</p> <p><img src="/assets/img/options.5d4cf321.png" alt="options.png"></p> <p>最后一步是添加选项逻辑。 使用以下代码在扩展目录中创建一个名为 options.js 的文件。</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">let</span> page <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'buttonDiv'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> kButtonColors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'#3aa757'</span><span class="token punctuation">,</span> <span class="token string">'#e8453c'</span><span class="token punctuation">,</span> <span class="token string">'#f9bb2d'</span><span class="token punctuation">,</span> <span class="token string">'#4688f1'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">constructOptions</span><span class="token punctuation">(</span><span class="token parameter">kButtonColors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">of</span> kButtonColors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      button<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> item<span class="token punctuation">;</span>
+      button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        chrome<span class="token punctuation">.</span>storage<span class="token punctuation">.</span>sync<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">{</span>color<span class="token operator">:</span> item<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'color is '</span> <span class="token operator">+</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      page<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">constructOptions</span><span class="token punctuation">(</span>kButtonColors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>提供了四个颜色选项，然后使用 onclick 事件监听器将它们生成为选项页面上的按钮。用户单击按钮时，它将更新扩展程序全局存储中的颜色值。由于所有扩展名文件都从全局存储中提取颜色信息，因此无需更新其他值。</p> <h3 id="下一步"><a href="#下一步" class="header-anchor">#</a> 下一步</h3> <p>恭喜你！该目录现在包含一个功能齐全的 Chrome 扩展程序，尽管比较简单。</p> <p>下一步是什么？</p> <ul><li><p><a href="/guide/overview.html">Chrome扩展程序概述</a>在总体上介绍了有关扩展程序架构的详细信息，以及开发人员希望熟悉的一些特定概念。</p></li> <li><p>在<a href="/guide/tut_debugging.html">调试教程</a>中了解可用于调试扩展的选项。</p></li> <li><p>Chrome 扩展程序可以访问功能强大的 API，而这些 API 均超出开放网络所提供的范围。 <a href="https://developer.chrome.com/api_index" target="_blank" rel="noopener noreferrer">chrome.*API文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 将介绍每个 API。</p></li> <li><p><a href="/guide/devguide.html">开发人员指南</a>还有许多其他链接，这些链接指向与高级扩展创建相关的文档。</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/what-is-extensions.html" class="prev">
+        什么是扩展
+      </a></span> <span class="next"><a href="/guide/overview.html">
+        总览
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.eec56759.js" defer></script><script src="/assets/js/2.dc06fe70.js" defer></script><script src="/assets/js/7.ac5fdd81.js" defer></script>
+  </body>
+</html>
