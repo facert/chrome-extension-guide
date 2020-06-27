@@ -1,10 +1,18 @@
 module.exports = {
   title: 'Chrome 扩展(插件) 开发教程',
   description: 'Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版',
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-165277587-3' // UA-00000000-0
+      }
+    ]
+  ],
   themeConfig: {
     nav: [
       { text: '官方中文版教程', link: '/guide/what-is-extensions.html' },
-      { text: 'Github', link: 'https://github.com/facert', target:'_blank', rel:'' },
+      { text: 'Github', link: 'https://github.com/facert/chrome-extension-guide', target:'_blank', rel:'' },
     ],
     //sidebar: 'auto',
     sidebar: [
