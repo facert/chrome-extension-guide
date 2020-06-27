@@ -3,7 +3,7 @@ home: true
 heroImage: /ext1.png
 heroText: Chrome 扩展(插件)开发教程
 tagline: 官方文档中文版
-actionText: 快速阅读 →
+actionText: 开始阅读 →
 actionLink: /guide/what-is-extensions
 ---
 
