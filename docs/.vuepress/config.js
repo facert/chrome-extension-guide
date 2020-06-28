@@ -1,6 +1,16 @@
 module.exports = {
   title: 'Chrome 扩展(插件) 开发教程',
   description: 'Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版',
+  head: [
+    [
+      "script",
+      {
+        "data-ad-client": "ca-pub-6048304318304307",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      }
+    ]
+  ],
   plugins: [
     [
       '@vuepress/google-analytics',
