@@ -6,7 +6,7 @@
 
 首先，创建一个新目录来保存扩展名的文件。
 
-完整的扩展程序可以在[此处](./assets/get_started_complete.zip)下载。
+完整的扩展程序可以在[此处](/get_started_complete.zip)下载。
 
 ### 创建 Manifest
 
