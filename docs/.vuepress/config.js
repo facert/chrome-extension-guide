@@ -22,11 +22,18 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '官方中文版教程', link: '/guide/what-is-extensions.html' },
-      { text: 'Blog文章', link: '/blog/pornhub-video-download-extension.html' },
+      { text: 'Blog', link: '/blog/pornhub-video-download-extension.html' },
       { text: 'Github', link: 'https://github.com/facert/chrome-extension-guide', target:'_blank', rel:'' },
     ],
     //sidebar: 'auto',
     sidebar: [
+     {
+        title: 'Blog',
+        path: '/blog',
+        children: [
+          '/blog/pornhub-video-download-extension.html'
+        ]
+     },
      {
 	title: '官方教程',
         path: '/',
