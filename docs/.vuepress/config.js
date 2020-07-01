@@ -29,7 +29,7 @@ module.exports = {
     sidebar: [
      {
         title: 'Blog',
-        path: '/blog',
+        path: '/blog/pornhub-video-download-extension.html',
         children: [
           '/blog/pornhub-video-download-extension.html'
         ]
