@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Chrome 扩展(插件) 开发教程',
-  description: 'Chrome 扩展(插件) 开发教程 最新 Chrome 扩展官方文档教程中文版',
+  description: 'Chrome 扩展(插件) 开发教程 2020 最新 Chrome 扩展官方文档教程中文版，从零开始开发一个浏览器插件教程。',
   head: [
     [
       "script",
