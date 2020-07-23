@@ -31,7 +31,8 @@ module.exports = {
         title: 'Blog',
         path: '/blog/pornhub-video-download-extension.html',
         children: [
-          '/blog/pornhub-video-download-extension.html'
+          '/blog/pornhub-video-download-extension.html',
+          '/blog/我是如何通过天气扩展月入2500$%20【译】.html'
         ]
      },
      {
