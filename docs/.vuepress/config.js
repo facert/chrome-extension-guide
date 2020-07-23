@@ -32,7 +32,7 @@ module.exports = {
         path: '/blog/pornhub-video-download-extension.html',
         children: [
           '/blog/pornhub-video-download-extension.html',
-          '/blog/我是如何通过开发天气扩展月入2500$.html'
+          '/blog/我是如何通过开发天气扩展月入2500$ .html'
         ]
      },
      {
