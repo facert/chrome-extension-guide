@@ -32,7 +32,8 @@ module.exports = {
         path: '/blog/pornhub-video-download-extension.html',
         children: [
           '/blog/pornhub-video-download-extension.html',
-          '/blog/how-to-make-money-use-chrome-extension.html'
+          '/blog/how-to-make-money-use-chrome-extension.html',
+          '/blog/How-to-monetise-a-Chrome-Extension.html'
         ]
      },
      {
