@@ -51,7 +51,4 @@
 
 ![](https://github.com/facert/chrome-extension-guide/blob/master/docs/.vuepress/public/mp1.png)
 
-2. 加入 Chrome 插件开发微信群，一起学习交流。二维码过期可加 jeeeeeffer 微信进群。
-
-![](https://github.com/facert/chrome-extension-guide/blob/master/docs/.vuepress/public/group3.png)
 
